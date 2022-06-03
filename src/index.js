@@ -19,7 +19,7 @@ app.use(
 // routes
 app.use(require('./routes.js'))
 
-const PORT = process.env.PORT || 2500;
+const PORT = process.env.PORT || 5432;
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
