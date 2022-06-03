@@ -26,28 +26,25 @@ router.get('/partidos/equipo_local/:equipo_local', partido.getPartidoEquipoLocal
 router.get('/partidos/equipo_visitante/:equipo_visitante', partido.getPartidoEquipoVisitante);
 router.get('/partidos/localidad/:localidad_nombre', partido.getPartidoLocalidad);
 router.get('/partidos/torneo/:torneo_nombre', partido.getPartidoTorneo);
-router.get('/partidos/:estado', partido.getPartidoEstado);
+router.get('/partidos/estado/:estado', partido.getPartidoEstado);
 
 router.get('/jugadores', jugador.getJugadores);
 router.get('/jugadores/:nombre', jugador.getJugadorNombre);
-router.get('/jugadores/:apellido', jugador.getJugadorApellido);
-router.get('/jugadores/:fecha_nac', jugador.getJugadorFechaNac);
-router.get('/jugadores/:dni', jugador.getJugadorDni);
-router.get('/jugadores/:sexo', jugador.getJugadorSexo);
-router.get('/jugadores/:puesto', jugador.getJugadorPuesto);
-router.get('/jugadores/:equipo_nombre', jugador.getJugadorEquipo);
+router.get('/jugadores/apellido/:apellido', jugador.getJugadorApellido);
+router.get('/jugadores/fecha_nac/:fecha_nac', jugador.getJugadorFechaNac);
+router.get('/jugadores/dni/:dni', jugador.getJugadorDni);
+router.get('/jugadores/sexo/:sexo', jugador.getJugadorSexo);
+router.get('/jugadores/puesto/:puesto', jugador.getJugadorPuesto);
+router.get('/jugadores/equipo_nombre/:equipo_nombre', jugador.getJugadorEquipo);
 
 router.get('/torneos', torneo.getTorneos);
 router.get('/torneos/:nombre', torneo.getTorneoNombre);
-router.get('/torneos/:fecha_ini', torneo.getTorneoIni);
-router.get('/torneos/:fecha_fin', torneo.getTorneoFin);
+router.get('/torneos/fecha_ini/:fecha_ini', torneo.getTorneoIni);
+router.get('/torneos/fecha_fin/:fecha_fin', torneo.getTorneoFin);
 
 router.get('/localidades', localidad.getLocalidades);
 router.get('/localidades/:nombre', localidad.getLocalidadNombre);
-router.get('/localidades/:cod_postal', localidad.getLocalidadPostal);
-router.get('/localidades/:poblacion', localidad.getLocalidadHabitantes);
-
-// Rutas de autenticacion
-//router.post('/autenticar', authenticate.autenticar);
+router.get('/localidades/cod_postal/:cod_postal', localidad.getLocalidadPostal);
+router.get('/localidades/poblacion/:poblacion', localidad.getLocalidadHabitantes);
 
 module.exports = router;
