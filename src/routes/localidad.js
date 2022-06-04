@@ -10,7 +10,7 @@ const {
 
 /**
  * @swagger
- * /jugadores:
+ * /localidades:
  *   get:
  *     description: Ruta para obtener todas las localidad.
  *     tags:

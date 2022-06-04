@@ -33,7 +33,7 @@ router.get("/jugadores", getJugadores);
  *   get:
  *     description: Consultar por nombre de un equipo.
  *     tags:
- *       - Equipos
+ *       - Jugadores
  *     parameters:
  *       - in: path
  *         name: nombre
