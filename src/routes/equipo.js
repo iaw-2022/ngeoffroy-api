@@ -51,11 +51,11 @@ router.get('/equipos/:nombre', getEquipoPorNombre);
  *       - Equipos
  *     parameters:
  *       - in: path
- *         name: id
+ *         name: nombre_estadio
  *         schema:
  *           type: string
  *         required: true
- *         description: Nombre de equipo
+ *         description: Nombre de estadio
  *     responses:
  *       '200':
  *         description: Consulta exitosa
@@ -75,10 +75,9 @@ router.get('/equipos/:nombre', getEquipoPorNombre);
  *       - Equipos
  *     parameters:
  *       - in: path
- *         name: date
+ *         name: capitan
  *         schema:
  *           type: string
- *           example: "2022-02-01"
  *         required: true
  *         description: Nombre de capitan
  *     responses:
