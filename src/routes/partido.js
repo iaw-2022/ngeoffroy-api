@@ -21,7 +21,7 @@ const {
  *       '200':
  *         description: Consulta exitosa
  *       '404':
- *         description: Consulta no encontrada
+ *         description: No se encontraron partidos
  */
 router.get("/partidos", getPartidos);
 
@@ -43,9 +43,9 @@ router.get("/partidos", getPartidos);
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de equipo incorrecto
+ *         description: Partido no encontrado bajo ese criterio
  *       '404':
- *         description: Consulta no encontrada
+ *         description: No se han encontrado partidos con ese criterio en equipo local
  */
 router.get("/partidos/equipo_local/:equipo_local", getPartidoEquipoLocal);
 
@@ -67,9 +67,9 @@ router.get("/partidos/equipo_local/:equipo_local", getPartidoEquipoLocal);
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de equipo incorrecto
+ *         description: Partido no encontrado bajo ese criterio
  *       '404':
- *         description: Consulta no encontrada
+ *         description: No se han encontrado partidos con ese criterio en equipo visitante
  */
 router.get("/partidos/equipo_visitante/:equipo_visitante", getPartidoEquipoVisitante);
 
@@ -91,9 +91,9 @@ router.get("/partidos/equipo_visitante/:equipo_visitante", getPartidoEquipoVisit
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de localidad incorrecta
+ *         description: Partido no encontrado bajo ese criterio
  *       '404':
- *         description: Consulta no encontrada
+ *         description: No se han encontrado partidos disputados bajo esa localidad
  */
 router.get("/partidos/localidad/:localidad_nombre", getPartidoLocalidad);
 
@@ -115,9 +115,9 @@ router.get("/partidos/localidad/:localidad_nombre", getPartidoLocalidad);
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de torneo incorrecta
+ *         description: Partido no encontrado bajo ese criterio
  *       '404':
- *         description: Consulta no encontrada
+ *         description: No se han encontrado partidos en ese torneo
  */
  router.get("/partidos/torneo/:torneo_nombre", getPartidoTorneo);
 
@@ -134,14 +134,14 @@ router.get("/partidos/localidad/:localidad_nombre", getPartidoLocalidad);
  *         schema:
  *           type: string
  *         required: true
- *         description: estado
+ *         description: FINALIZADO, SUSPENDIDO, POR JUGAR (en mayusculas)
  *     responses:
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Estado incorrecta
+ *         description: Partido no encontrado bajo ese criterio
  *       '404':
- *         description: Consulta no encontrada
+ *         description: Partidos no encontrado bajo ese estado
  */
   router.get("/partidos/estado/:estado", getPartidoEstado);
 

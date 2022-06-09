@@ -35,7 +35,7 @@ router.get('/jugadores/fecha_nac/:fecha_nac', jugador.getJugadorFechaNac);
 router.get('/jugadores/dni/:dni', jugador.getJugadorDni);
 router.get('/jugadores/sexo/:sexo', jugador.getJugadorSexo);
 router.get('/jugadores/puesto/:puesto', jugador.getJugadorPuesto);
-router.get('/jugadores/equipo_nombre/:equipo_nombre', jugador.getJugadorEquipo);
+router.get('/jugadores/equipo_nombre/:equipo_nombre', jugador.getJugadoresEquipo);
 
 router.get('/torneos', torneo.getTorneos);
 router.get('/torneos/:nombre', torneo.getTorneoNombre);
@@ -45,6 +45,6 @@ router.get('/torneos/fecha_fin/:fecha_fin', torneo.getTorneoFin);
 router.get('/localidades', localidad.getLocalidades);
 router.get('/localidades/:nombre', localidad.getLocalidadNombre);
 router.get('/localidades/cod_postal/:cod_postal', localidad.getLocalidadPostal);
-router.get('/localidades/poblacion/:poblacion', localidad.getLocalidadHabitantes);
+router.get('/localidades/cant_habitantes/:cant_habitantes', localidad.getLocalidadHabitantes);
 
 module.exports = router;

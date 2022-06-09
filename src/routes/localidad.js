@@ -56,7 +56,7 @@ router.get("/localidades/:nombre", getLocalidadNombre);
  *       - Localidades
  *     parameters:
  *       - in: path
- *         name: apellido
+ *         name: cod_postal
  *         schema:
  *           type: integer
  *         required: true
@@ -73,14 +73,14 @@ router.get("/localidades/cod_postal/:cod_postal", getLocalidadPostal);
 
 /**
  * @swagger
- * /localidades/poblacion/{poblacion}:
+ * /localidades/cant_habitantes/{cant_habitantes}:
  *   get:
  *     description: Consulta jugador por cantidad de habitantes.
  *     tags:
  *       - Localidades
  *     parameters:
  *       - in: path
- *         name: poblacion
+ *         name: cant_habitantes
  *         schema:
  *           type: integer
  *         required: true
@@ -93,6 +93,6 @@ router.get("/localidades/cod_postal/:cod_postal", getLocalidadPostal);
  *       '404':
  *         description: Consulta no encontrada
  */
-router.get("/localidades/poblacion/:poblacion", getLocalidadHabitantes);
+router.get("/localidades/cant_habitantes/:cant_habitantes", getLocalidadHabitantes);
 
 module.exports = router;

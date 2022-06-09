@@ -175,24 +175,24 @@ router.get("/jugadores/puesto/:puesto", getJugadorPuesto);
  * @swagger
  * /jugadores/equipo_nombre/{equipo_nombre}:
  *   get:
- *     description: Consultar jugador por nombre de equipo
+ *     description: Consultar jugadores por nombre de equipo
  *     tags:
  *       - Jugadores
  *     parameters:
  *       - in: path
- *         name: equipo nombre
+ *         name: equipo_nombre
  *         schema:
  *           type: string
  *         required: true
- *         description: Nombre de equipo
+ *         description: Nombre de equipo de los jugadores a consltar
  *     responses:
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de equipo incorrecto
+ *         description: Equipo incorrecto
  *       '404':
  *         description: Consulta no encontrada
  */
-router.get("/jugadores/equipo_nombre/:equipo_nombre", getJugadorEquipo);
+ router.get("/jugadores/equipo_nombre/:equipo_nombre", getJugadoresEquipo);
 
 module.exports = router;

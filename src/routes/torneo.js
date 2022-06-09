@@ -41,9 +41,9 @@ router.get("/torneos", getTorneos);
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de torneo incorrecta
+ *         description: Torneo no encontrado bajo ese criterio
  *       '404':
- *         description: Consulta no encontrada
+ *         description: Torneo no encontrado bajo ese nombre
  */
 router.get("/torneos/:nombre", getTorneoNombre);
 
@@ -58,7 +58,7 @@ router.get("/torneos/:nombre", getTorneoNombre);
  *       - in: path
  *         name: fecha_ini
  *         schema:
- *           type: integer
+ *           type: date
  *         required: true
  *         description: Fecha inicial de un torneo
  *     responses:
@@ -82,7 +82,7 @@ router.get("/torneos/fecha_ini/:fecha_ini", getTorneoIni);
  *       - in: path
  *         name: fecha_fin
  *         schema:
- *           type: integer
+ *           type: date
  *         required: true
  *         description: Fecha de finalización
  *     responses:

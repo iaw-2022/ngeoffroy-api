@@ -60,7 +60,7 @@ router.get('/equipos/:nombre', getEquipoPorNombre);
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre de equipo invalido
+ *         description: Nombre de estadio invalido
  *       '404':
  *         description: Consulta no encontrada
  */
