@@ -31,12 +31,12 @@ const getTorneoNombre = async (req, res) => {
 
 const getTorneoIni = async (req, res) => {
   const fecha_ini = req.params.fecha_ini;
-  console.log(fecha_ini);
-  if (typeof fecha_ini === "date") {
+  if (typeof fecha_ini === "string") {
     const response = await database.query(
-      "SELECT * FROM jugadores WHERE fecha_ini = $1",
+      "SELECT * FROM torneos WHERE fecha_ini = $1",
       [fecha_ini]
     );
+    console.log("response: "+response);
     if (response.rows.length > 0) {
       res.status(200).json(response.rows);
     } else {
@@ -52,7 +52,7 @@ const getTorneoIni = async (req, res) => {
 const getTorneoFin = async (req, res) => {
   const fecha_fin = req.params.fecha_fin;
 
-  if (typeof fecha_fin === "date") {
+  if (typeof fecha_fin === "string") {
     const response = await database.query(
       "SELECT * FROM torneos WHERE fecha_fin = $1",
       [fecha_fin]

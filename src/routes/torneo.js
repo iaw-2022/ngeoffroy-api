@@ -58,7 +58,7 @@ router.get("/torneos/:nombre", getTorneoNombre);
  *       - in: path
  *         name: fecha_ini
  *         schema:
- *           type: date
+ *           type: string
  *         required: true
  *         description: Fecha inicial de un torneo
  *     responses:
@@ -82,7 +82,7 @@ router.get("/torneos/fecha_ini/:fecha_ini", getTorneoIni);
  *       - in: path
  *         name: fecha_fin
  *         schema:
- *           type: date
+ *           type: string
  *         required: true
  *         description: Fecha de finalización
  *     responses:
@@ -93,6 +93,6 @@ router.get("/torneos/fecha_ini/:fecha_ini", getTorneoIni);
  *       '404':
  *         description: Consulta no encontrada
  */
-router.get("/jugadores/equipo_nombre/:equipo_nombre", getTorneoFin);
+ router.get("/torneos/fecha_fin/:fecha_fin", getTorneoFin);
 
 module.exports = router;

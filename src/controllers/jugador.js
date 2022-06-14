@@ -70,7 +70,7 @@ const getJugadorDni = async (req, res) => {
 const getJugadorFechaNac = async (req, res) => {
   const fecha_nac = req.params.fecha_nac;
   console.log(fecha_nac);
-  if (typeof fecha_nac === "date") {
+  if (typeof fecha_nac === "string") {
     const response = await database.query(
       "SELECT * FROM jugadors WHERE fecha_nac = $1",
       [fecha_nac]
@@ -128,7 +128,7 @@ const getJugadorPuesto = async (req, res) => {
 const getJugadoresEquipo = async (req, res) => {
   const equipo_nombre = req.params.equipo_nombre;
   console.log(req.params);
-  if (typeof equipo_nombre === "string") {
+  if (typeof equipo_nombre === "date") {
     const response = await database.query(
       "SELECT * FROM jugadors WHERE equipo_nombre = $1",
       [equipo_nombre]
