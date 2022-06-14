@@ -69,7 +69,6 @@ const getJugadorDni = async (req, res) => {
 
 const getJugadorFechaNac = async (req, res) => {
   const fecha_nac = req.params.fecha_nac;
-  console.log(fecha_nac);
   if (typeof fecha_nac === "string") {
     const response = await database.query(
       "SELECT * FROM jugadors WHERE fecha_nac = $1",
