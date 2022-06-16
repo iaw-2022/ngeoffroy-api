@@ -14,7 +14,7 @@ const { getEquipos, getEquipoPorNombre, getEquipoPorEstadio, getEquipoCapitan } 
  *       '200':
  *         description: Consulta exitosa
  *       '404':
- *         description: Consulta no encontrada
+ *         description: No hay equipos disponibles
  */
 router.get('/equipos', getEquipos);
 
@@ -36,9 +36,9 @@ router.get('/equipos', getEquipos);
  *       '200':
  *         description: Consulta exitosa
  *       '400':
- *         description: Nombre inválido
+ *         description: Nombre de equipo inválido
  *       '404':
- *         description: Consulta no encontrada
+ *         description: Equipo no encontrado
  */
 router.get('/equipos/:nombre', getEquipoPorNombre);
 
@@ -62,7 +62,7 @@ router.get('/equipos/:nombre', getEquipoPorNombre);
  *       '400':
  *         description: Nombre de estadio invalido
  *       '404':
- *         description: Consulta no encontrada
+ *         description: Equipo no encontrado
  */
  router.get('/equipos/nombre_estadio/:nombre_estadio', getEquipoPorEstadio);
 
@@ -86,7 +86,7 @@ router.get('/equipos/:nombre', getEquipoPorNombre);
  *       '400':
  *         description: Nombre de capitan incorrecto
  *       '404':
- *         description: Consulta no encontrada
+ *         description: Equipo no encontrado
  */
 router.get('/equipos/capitan/:capitan', getEquipoCapitan);
 
