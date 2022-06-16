@@ -58,6 +58,7 @@ router.get("/torneos/:nombre", getTorneoNombre);
  *       - in: path
  *         name: fecha_ini
  *         schema:
+ *           example: "1994-08-13"
  *           type: string
  *         required: true
  *         description: Fecha inicial de un torneo
@@ -82,6 +83,7 @@ router.get("/torneos/fecha_ini/:fecha_ini", getTorneoIni);
  *       - in: path
  *         name: fecha_fin
  *         schema:
+ *           example: "1994-08-13"
  *           type: string
  *         required: true
  *         description: Fecha de finalización

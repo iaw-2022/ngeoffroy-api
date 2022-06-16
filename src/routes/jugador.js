@@ -86,6 +86,7 @@ router.get("/jugadores/apellido/:apellido", getJugadorApellido);
  *       - in: path
  *         name: fecha_nac
  *         schema:
+ *           example: "1994-08-13"
  *           type: date
  *         required: true
  *         description: Fecha de nacimiento
